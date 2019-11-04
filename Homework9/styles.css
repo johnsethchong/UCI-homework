@@ -1,0 +1,58 @@
+body {
+    background-color: white;
+}
+
+#home {
+     color: white);
+     background-color: rgb(12, 173, 167);
+     font-family: times new roman;
+     font-weight: bold;
+}
+
+h2 {
+     color: rgb(12, 173, 167);
+     background-color: white;
+     font-family: calibri;
+     font-weight: bold;
+}
+
+img {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+p {
+   font-family: calibri;
+   font-size: 12;
+   background-color: white;
+}
+
+/* .container {
+  background-color: white;
+} */
+
+.navbar {
+         padding-left: 50px;
+}
+
+.navbar-brand {
+               background-color: rgb(12, 173, 167);
+               font-family: times new roman;
+               font-weight: bold;
+               color: white;
+}
+
+/* Here we define a navbar style that will ONLY be applied at screen sizes below 480 pixels */
+@media (max-width: 480px) {
+  .navbar {
+    background-color: rgb(12, 173, 167);
+}
+
+  .navbar-brand {
+                 background-color: white;
+                 font-family: times new roman;
+                 font-weight: bold;
+                 color: rgb(12, 173, 167);
+}

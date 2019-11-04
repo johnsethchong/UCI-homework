@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Visualization Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="home" class="active navbar-brand brand_color" href="index.html">Latitude</a>
+            </div>
+            <div>
+
+                <div class="navbar" id="myNavbar">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <button class="dropbtn">Plots<i class="fa fa-caret-down"></i>
+                            </button>
+                            </a>
+                            <ul class="dropdown-content">
+                                <li>
+                                    <a href="maxtemp.html">Max Temperature</a>
+                                </li>
+                                <li>
+                                    <a href="humidity.html">Humidity</a>
+                                </li>
+                                <li>
+                                    <a href="cloudiness.html">Cloudiness</a>
+                                </li>
+                                <li>
+                                    <a href="windspeed.html">Wind Speed</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="comparison.html">Comparison</a>
+                            </li>
+                            <li>
+                            <a href="data.html">Data</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--End "nav bar"-->
+    <div class="container-fluid">
+        <div class="page-header">
+            <div class="jumbotron">
+                <header>
+                    <div class="row">
+                        <div class="left col-lg-8 col-md-8 col-xs-12">
+                            <h2>Summary: Latitude vs. X</h2>
+                            <img id="image" src="Resources\assets\images\Fig1.png" width="200" height="175" class="pull-left img-responsive img-rounded" alt="Latitude vs Longitude">
+                            <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled date from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+                                <br>                                  
+                            <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Visualizations</h2>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="thumbnail">
+                                        <a href="maxtemp.html"><img src="Resources\assets\images\Fig1.png" width="200" height="175" class="img-responsive" alt="Latitude vs Max Temperature"></a>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="thumbnail">
+                                        <a href="humidity.html"><img src="Resources\assets\images\Fig2.png" width="200" height="175" class="img-responsive" alt="Latitude vs Humnidity"></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="thumbnail">
+                                        <a href="cloudiness.html"><img src="Resources\assets\images\Fig3.png" width="200" height="175" class="img-responsive" alt="Latitude vs Cloudiness"></a>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="thumbnail">
+                                        <a href="wind_speed.html"><img src="Resources\assets\images\Fig4.png" width="200" height="175" class="img-responsive" alt="Latitude vs Wind Speed"></a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- <div class="clearfix"></div> -->
+                </header>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+
+
+</html>
