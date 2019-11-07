@@ -5,7 +5,7 @@ body {
 #home {
      color: white);
      background-color: rgb(12, 173, 167);
-     font-family: times new roman;
+     font-family: calibri;
      font-weight: bold;
 }
 
@@ -43,7 +43,7 @@ p {
 
 .navbar-brand {
                background-color: rgb(12, 173, 167);
-               font-family: times new roman;
+               font-family: calibri;
                font-weight: bold;
                color: white;
                padding-right: 10px;
@@ -58,7 +58,7 @@ p {
 
   .navbar-brand {
                  background-color: white;
-                 font-family: times new roman;
+                 font-family: calibri;
                  font-weight: bold;
                  color: rgb(12, 173, 167);
 }
