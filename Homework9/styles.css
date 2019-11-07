@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+  background-color: lightgrey;
 }
 
 #home {
@@ -14,6 +14,8 @@ h2 {
      background-color: white;
      font-family: calibri;
      font-weight: bold;
+     padding-top: 10px;
+     padding-bottom: 10px;
 }
 
 img {
@@ -21,6 +23,7 @@ img {
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
+    
 }
 
 p {
@@ -29,12 +32,13 @@ p {
    background-color: white;
 }
 
-/* .container {
-  background-color: white;
-} */
+.nav-item {
+  text-align: right;
+  float:right;
+}
 
-.navbar {
-         padding-left: 50px;
+.container {
+  background-color: white
 }
 
 .navbar-brand {
@@ -42,6 +46,8 @@ p {
                font-family: times new roman;
                font-weight: bold;
                color: white;
+               padding-right: 10px;
+               padding-left: 10px;
 }
 
 /* Here we define a navbar style that will ONLY be applied at screen sizes below 480 pixels */
