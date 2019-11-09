@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Visualization Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body >
+
+    <nav class="navbar navbar-expand-lg">
+        <a id="home" class="active navbar-brand brand_color" href="index.html">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto pull-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                        <a class="dropdown-item" href="maxtemp.html">Max Temperature</a>
+                        <a class="dropdown-item" href="humidity.html">Humidity</a>
+                        <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                        <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparison.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container jumbotron">
+        <article class="description-content row">
+          <div class="col-xs-12">
+            <h2>Comparison: Latitude vs X</h2>
+            <hr/>
+            <p>Click any plot to get an in-depth analysis.</p>
+          </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>vs. Max Temperature</h2>
+                 <a href="maxtemp.html"><img src="Resources\assets\images\Fig1.png" width="200" height="175" class="img-responsive" alt="Latitude vs Max Temperature"></a>
+                    <hr class="visible-xs visible-sm">
+            </div>
+                <div class="col-md-6">
+                    <h2>vs. Humidity</h2>
+                    <a href="humidity.html"><img src="Resources\assets\images\Fig2.png" width="200" height="175" class="img-responsive" alt="Latitude vs Humnidity"></a>
+                    <hr class="visible-xs visible-sm">
+                </div>
+            <div class="row">
+                </div>
+                <div class="col-md-6">
+                    <h2>vs. Cloudiness</h2>
+                    <a href="cloudiness.html"><img src="Resources\assets\images\Fig3.png" width="200" height="175" class="img-responsive" alt="Latitude vs Cloudiness"></a>
+                    <hr class="visible-xs visible-sm">
+                </div>   
+                <div class="col-md-6">
+                    <h2>vs. Wind Speed</h2>
+                    <a href="wind_speed.html"><img src="Resources\assets\images\Fig4.png" width="200" height="175" class="img-responsive" alt="Latitude vs Wind Speed"></a>
+                </div>
+            </div>
+        </article>
+      </div>
+</body>
+
+
+
+</html>
