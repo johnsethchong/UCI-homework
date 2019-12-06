@@ -33,7 +33,7 @@ button.on("click", function(event) {
         var filteredData = tableData; //Shows the whole dataset by default
     }
     else {
-        var filteredData = tableData.filter(sighting => sighting.datetime === inputValue); //Filters out the dataset according to input
+        var filteredData = tableData.filter(sighting => sighting.datetime === inputValue); //Filters out the dataset according to user input
     };
 
 
