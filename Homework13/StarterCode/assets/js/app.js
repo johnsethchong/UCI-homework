@@ -104,11 +104,11 @@ d3.csv("assets/data/data.csv").then(function(healthData){
         .attr("y", 0 - margin.left + 40)
         .attr("x", 0 - (chartHeight / 2))
         .attr("dy", "1em")
-        .attr("class", "axisText")
+        .attr("class", "aText")
         .text("Lacks Healthcare (%)");
 
     chartGroup.append("text")
         .attr("transform", `translate(${chartWidth / 2}, ${height + margin.top + 30})`)
-        .attr("class", "axisText")
+        .attr("class", "aText")
         .text("In Poverty (%)");
 });
