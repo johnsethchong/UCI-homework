@@ -22,7 +22,7 @@ var chartGroup = svg.append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 //Read in CSV/json
-d3.csv("../data/data.csv").then(function(healthData){
+d3.csv("assets/data/data.csv").then(function(healthData){
     console.log(healthData);
     //Parse data (poverty and healthcare)
     healthData.forEach(function(data){ 
@@ -30,8 +30,8 @@ d3.csv("../data/data.csv").then(function(healthData){
         data.healthcare = +data.healthcare;
     });
     //Create scales
-    var xLinearScale = d3.scaleLinear().range([0, width]);
-    var yLinearScale = d3.scaleLinear().range([height, 0]);
+    var xLinearScale = d3.scaleLinear().range([0, chartWidth]);
+    var yLinearScale = d3.scaleLinear().range([chartHeight, 0]);
 
     //Create Axes
     var bottomAxis = d3.axisBottom(xLinearScale);
@@ -46,7 +46,7 @@ d3.csv("../data/data.csv").then(function(healthData){
         return data.healthcare;
     });
 
-    xMax = d3.max(healhData, function(data) {
+    xMax = d3.max(healthData, function(data) {
         return data.healthcare;
     });
 
@@ -64,7 +64,7 @@ d3.csv("../data/data.csv").then(function(healthData){
 
     //Append axes to SVG group (chartGroup)
     chartGroup.append("g")
-    .attr("transform", `translate(0, ${height})`)
+    .attr("transform", `translate(0, ${chartHeight})`)
     .call(bottomAxis);
 
     chartGroup.append("g")
@@ -81,11 +81,9 @@ d3.csv("../data/data.csv").then(function(healthData){
     .attr("r", "15")
     .attr("fill", "lightblue")
     .attr("opacity", .75)
-    .on("mouseout", function(data, index) {
-        toolTip.hide(data);
-
+;
     var toolTip = d3.tip()
-    .attr("class", "tooltip")
+    .attr("class", "d3-tip")
     .offset([80, -60])
     .html(function(d) {
         return (abbr + '%');
@@ -94,25 +92,23 @@ d3.csv("../data/data.csv").then(function(healthData){
 
     chartGroup.call(toolTip);
 
-    //Make event listeners to display and hide the tooltip
-    abbrGroup.on("mouseover", function(data) {
-        toolTip.show(data, this);
+    //Make event listeners
+    circlesGroup.on("mouseover", function(data) {
+        toolTip.show(data);
     })
-        .on("mouseout", function(data, index) {
-        toolTip.hide(data);
-        });
+
 
     // Create axes labels
     chartGroup.append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 0 - margin.left + 40)
-        .attr("x", 0 - (height / 2))
+        .attr("x", 0 - (chartHeight / 2))
         .attr("dy", "1em")
         .attr("class", "axisText")
-        .text("Lacks Healthcare");
+        .text("Lacks Healthcare (%)");
 
     chartGroup.append("text")
-        .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
+        .attr("transform", `translate(${chartWidth / 2}, ${height + margin.top + 30})`)
         .attr("class", "axisText")
-        .text("In Poverty");
+        .text("In Poverty (%)");
 });
