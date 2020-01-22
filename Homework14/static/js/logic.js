@@ -68,17 +68,17 @@ function createMap(earthquakes) {
 function fillColor(mag) {
     switch (mag) {
         case mag >= 5.0:
-            return '#d63027';
+            return "red";
         case mag >= 4.0:
-            return '#f78a57';
+            return "orange";
         case mag >= 3.0:
-            return '#ffe18c';
+            return "yellow";
         case mag >= 2.0:
-            return '#d9ef8b';
+            return "lime";
         case mag >= 1.0:
-            return '#d7ed8a';
+            return "seagreem";
         case mag < 1.0:
-            return '#1a964f';
+            return "darkgreen";
     };
 };
 
